@@ -1,0 +1,33 @@
+{
+    "name": "hapi-socket",
+    "version": "0.2.0",
+    "description": "A simple Hapi Socket.IO plugin.",
+    "main": "index.js",
+    "scripts": {
+        "test": "NODE_ENV=test mocha",
+        "testwatch": "NODE_ENV=test mocha -w"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/jeltok/hapi-socket.git"
+    },
+    "keywords": [
+        "hapi",
+        "socket.io"
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/jeltok/hapi-socket/issues"
+    },
+    "dependencies": {
+        "socket.io": "1.x",
+        "hoek": "2.x.x"
+    },
+    "devDependencies": {
+        "mocha": "1.x",
+        "hapi": "6.x.x"
+    },
+    "peerDependencies": {
+        "hapi": "6.x.x"
+    }
+}
