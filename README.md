@@ -4,7 +4,7 @@ hapi-socket
 Socket.IO plugin for Hapi
 
         server.pack.register({
-            plugin: require('../'),
+            plugin: require('hapi-socket'),
             options: {
                 messageHandler: function (socket) {
                     return function (message) {
@@ -12,11 +12,10 @@ Socket.IO plugin for Hapi
                         socket.send(message);
                     };
                 },
-                logLevel: 6
+                logLevel: 2
             }
         }, function (err) {
-            server.route({ method: 'GET', path: '/', handler: { file: './chat.html' }});
             server.start(function () {
-                console.log("Hapi test server started @ " + server.info.uri);
+                console.log("Hapi server started @ " + server.info.uri);
             });
         });
