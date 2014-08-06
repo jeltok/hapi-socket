@@ -30,7 +30,12 @@ describe('Hapi server', function() {
         server.pack.register({
             plugin: require('../'),
             options: {
-                server: server,
+                messageHandler: function (socket) {
+                    return function (message) {
+                        console.log("Message sent!");
+                        socket.send(message);
+                    };
+                },
                 logLevel: 6
             }
         }, function (err) {
