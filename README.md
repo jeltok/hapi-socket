@@ -3,6 +3,8 @@ hapi-socket
 
 Socket.IO plugin for Hapi
 
+Sample usage code:
+
         server.pack.register({
             plugin: require('hapi-socket'),
             options: {
